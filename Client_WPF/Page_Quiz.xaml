@@ -1,0 +1,47 @@
+﻿<Page x:Class="Client_WPF.Page_Quiz"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Client_WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Page_Quiz">
+
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/quizBackground.jpg"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="60*"/>
+        </Grid.RowDefinitions>
+
+        <!-- QUIZ'S TITLE -->
+        <TextBlock Grid.Row="0" x:Name="quizTitle" HorizontalAlignment="Center" VerticalAlignment="Bottom" 
+                   FontSize="100" FontFamily="Ts Matka" FontWeight="Bold" />
+
+        <!-- STUDENT'S NAME -->
+        <Button x:Name="studentName" HorizontalAlignment="Right" VerticalAlignment="Top" 
+                 HorizontalContentAlignment="Right" VerticalContentAlignment="Top"
+                 FontSize="45" FontFamily="Asakim" Foreground="#FF080864" Click="Logout_Click"
+                 Background="{x:Null}" BorderBrush="{x:Null}" />
+
+        <!-- QUESTION -->
+        <TextBlock Grid.Row="1" x:Name="question" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="60" FontFamily="Nehama" FontWeight="Bold" />
+        
+        <StackPanel Grid.Row="2" Margin="10" VerticalAlignment="Top">
+            <TextBlock Text="מספר פריט:" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" FlowDirection="RightToLeft"/>
+            <TextBox x:Name="ItemNumberInput" Width="200" FontSize="20" Margin="0,5,0,20"/>
+        </StackPanel>
+
+        <!-- UNIFORM GRID - POSSIBLE ANSWERS -->
+        <UniformGrid Grid.Row="3" x:Name="answers" Margin="100,10,100,10" />
+
+    </Grid>
+</Page>

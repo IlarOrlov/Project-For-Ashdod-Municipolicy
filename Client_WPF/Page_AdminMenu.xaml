@@ -1,0 +1,140 @@
+﻿<Page x:Class="Client_WPF.Page_AdminMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Client_WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Page_AdminMenu">
+
+    <Grid>
+        <!-- BACKGROUND -->
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/subBackground.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <!-- MAIN VIEWBOX for responsiveness -->
+        <Viewbox Stretch="Uniform">
+            <Grid Width="1920" Height="1080">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+
+                <!-- BACK BUTTON -->
+                <Button Grid.Row="0" Grid.Column="0"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Height="100" Width="160"
+                        Click="Back_Click"
+                        Foreground="White"
+                        Background="#FF080864"
+                        BorderBrush="White">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="35"/>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Content>
+                        <Image Source="Images/backArrow.png" Height="48"/>
+                    </Button.Content>
+                </Button>
+
+                <!-- TITLE -->
+                <TextBlock Text="מנהל"
+                   Grid.Row="0" Grid.Column="2"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   FontSize="120"
+                   FontFamily="Ts Matka"
+                   FontWeight="Bold"/>
+
+                <!-- CREATE QUIZ BUTTON -->
+                <Button Grid.Row="1" Grid.Column="1"
+                Width="330" Height="330"
+                Click="CreateQuiz_Click"
+                Background="#FF080864"
+                Foreground="White"
+                BorderBrush="White"
+                FontSize="60"
+                FontWeight="Bold"
+                FontFamily="Nehama"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="135"/>
+                        </Style>
+                    </Button.Resources>
+                    <TextBlock TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center">
+                צור
+                <LineBreak/>
+                חידון חדש
+                    </TextBlock>
+                </Button>
+
+                <!-- CHECK STATISTICS BUTTON -->
+                <Button Grid.Row="1" Grid.Column="2"
+                Width="330" Height="330"
+                Click="CheckQuizStatistics_Click"
+                Background="#FF080864"
+                Foreground="White"
+                BorderBrush="White"
+                FontSize="55"
+                FontWeight="Bold"
+                FontFamily="Nehama"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="135"/>
+                        </Style>
+                    </Button.Resources>
+                    <TextBlock TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center">
+                חשב
+                <LineBreak/>
+                סטטיסטיקה
+                <LineBreak/>
+                של חידון
+                    </TextBlock>
+                </Button>
+
+                <!-- DELETE QUIZ BUTTON -->
+                <Button Grid.Row="1" Grid.Column="3"
+                Width="330" Height="330"
+                Click="DeleteQuiz_Click"
+                Background="#FF080864"
+                Foreground="White"
+                BorderBrush="White"
+                FontSize="60"
+                FontWeight="Bold"
+                FontFamily="Nehama"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="135"/>
+                        </Style>
+                    </Button.Resources>
+                    <TextBlock TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center">
+                מחק
+                <LineBreak/>
+                חידון קיים
+                    </TextBlock>
+                </Button>
+            </Grid>
+        </Viewbox>
+
+    </Grid>
+</Page>

@@ -1,0 +1,30 @@
+﻿<Window x:Class="Client_WPF.Messages.Login_Failed_Msg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client_WPF.Messages"
+        mc:Ignorable="d"
+        Title="Login_Failed_Msg" Height="350" Width="650" Background="{x:Null}"
+        WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" >
+    
+    <Grid>
+
+        <Rectangle Fill="#FFB4C8E6" RadiusX="100" RadiusY="100" Stroke="Black" StrokeThickness="3.5" />
+        <Image Source="/Images/Fail.png" Height="90" Width="90" Margin="175,10,175,240"/>
+
+        <TextBlock FontSize="65" FontFamily="Asakim" FontWeight="Bold" 
+   HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Text="!ההתחברות נכשלה&#xA;משתמש זה לא נמצא"/>
+
+        <Button Content="ok" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+                FontWeight="Bold" FontSize="28" FontFamily="Nehama" Margin="0,250,0,0"
+                Click="Continue_Click" Height="60" Width="80" Foreground="White" Background="#FF080864" >
+            <Button.Resources >
+                <Style TargetType="Border" >
+                    <Setter Property="CornerRadius" Value="30" />
+                </Style>
+            </Button.Resources >
+        </Button>
+
+    </Grid>
+</Window>

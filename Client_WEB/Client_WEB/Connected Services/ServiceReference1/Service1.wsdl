@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://wcf-ashdodarchieve-service.azurewebsites.net/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://wcf-ashdodarchieve-service.azurewebsites.net/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://wcf-ashdodarchieve-service.azurewebsites.net/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Model" />
+      <xsd:import schemaLocation="https://wcf-ashdodarchieve-service.azurewebsites.net/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_IsUserExistServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserExistServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_IsUserExistServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserExistServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_IsUserIsAdminServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserIsAdminServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_IsUserIsAdminServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserIsAdminServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_IsIDnumberExistServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsIDnumberExistServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_IsIDnumberExistServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsIDnumberExistServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertNewUserServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNewUserServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertNewUserServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNewUserServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateNewPasswordServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNewPasswordServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateNewPasswordServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNewPasswordServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertStudentServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertStudentServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertStudentServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertStudentServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStudentIDServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentIDServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStudentIDServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentIDServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStudentServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStudentServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertQuizServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertQuizServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertQuizServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertQuizServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_IsQuizExistServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsQuizExistServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_IsQuizExistServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsQuizExistServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetQuizIDServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuizIDServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetQuizIDServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuizIDServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllValidQuizTitlesServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllValidQuizTitlesServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllValidQuizTitlesServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllValidQuizTitlesServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllQuizTitlesServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllQuizTitlesServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllQuizTitlesServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllQuizTitlesServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteQuizServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteQuizServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteQuizServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteQuizServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetQuizByTitleServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuizByTitleServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetQuizByTitleServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuizByTitleServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertQuestionServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertQuestionServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertQuestionServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertQuestionServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteQuestionsServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteQuestionsServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteQuestionsServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteQuestionsServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertQuizSubmitServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertQuizSubmitServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertQuizSubmitServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertQuizSubmitServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStudentsQuizSubmitionsServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentsQuizSubmitionsServer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStudentsQuizSubmitionsServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentsQuizSubmitionsServerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserExistServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/IsUserExistServer" message="tns:IService1_IsUserExistServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/IsUserExistServerResponse" message="tns:IService1_IsUserExistServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserIsAdminServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/IsUserIsAdminServer" message="tns:IService1_IsUserIsAdminServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/IsUserIsAdminServerResponse" message="tns:IService1_IsUserIsAdminServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsIDnumberExistServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/IsIDnumberExistServer" message="tns:IService1_IsIDnumberExistServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/IsIDnumberExistServerResponse" message="tns:IService1_IsIDnumberExistServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewUserServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertNewUserServer" message="tns:IService1_InsertNewUserServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertNewUserServerResponse" message="tns:IService1_InsertNewUserServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNewPasswordServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateNewPasswordServer" message="tns:IService1_UpdateNewPasswordServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateNewPasswordServerResponse" message="tns:IService1_UpdateNewPasswordServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserServer" message="tns:IService1_GetUserServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserServerResponse" message="tns:IService1_GetUserServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertStudentServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertStudentServer" message="tns:IService1_InsertStudentServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertStudentServerResponse" message="tns:IService1_InsertStudentServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentIDServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStudentIDServer" message="tns:IService1_GetStudentIDServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStudentIDServerResponse" message="tns:IService1_GetStudentIDServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStudentServer" message="tns:IService1_GetStudentServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStudentServerResponse" message="tns:IService1_GetStudentServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertQuizServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertQuizServer" message="tns:IService1_InsertQuizServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertQuizServerResponse" message="tns:IService1_InsertQuizServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsQuizExistServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/IsQuizExistServer" message="tns:IService1_IsQuizExistServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/IsQuizExistServerResponse" message="tns:IService1_IsQuizExistServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuizIDServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetQuizIDServer" message="tns:IService1_GetQuizIDServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetQuizIDServerResponse" message="tns:IService1_GetQuizIDServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllValidQuizTitlesServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllValidQuizTitlesServer" message="tns:IService1_GetAllValidQuizTitlesServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllValidQuizTitlesServerResponse" message="tns:IService1_GetAllValidQuizTitlesServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllQuizTitlesServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllQuizTitlesServer" message="tns:IService1_GetAllQuizTitlesServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllQuizTitlesServerResponse" message="tns:IService1_GetAllQuizTitlesServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteQuizServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteQuizServer" message="tns:IService1_DeleteQuizServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteQuizServerResponse" message="tns:IService1_DeleteQuizServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuizByTitleServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetQuizByTitleServer" message="tns:IService1_GetQuizByTitleServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetQuizByTitleServerResponse" message="tns:IService1_GetQuizByTitleServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertQuestionServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertQuestionServer" message="tns:IService1_InsertQuestionServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertQuestionServerResponse" message="tns:IService1_InsertQuestionServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteQuestionsServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteQuestionsServer" message="tns:IService1_DeleteQuestionsServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteQuestionsServerResponse" message="tns:IService1_DeleteQuestionsServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertQuizSubmitServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertQuizSubmitServer" message="tns:IService1_InsertQuizSubmitServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertQuizSubmitServerResponse" message="tns:IService1_InsertQuizSubmitServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentsQuizSubmitionsServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStudentsQuizSubmitionsServer" message="tns:IService1_GetStudentsQuizSubmitionsServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStudentsQuizSubmitionsServerResponse" message="tns:IService1_GetStudentsQuizSubmitionsServer_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserExistServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/IsUserExistServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserIsAdminServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/IsUserIsAdminServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsIDnumberExistServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/IsIDnumberExistServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewUserServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertNewUserServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNewPasswordServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateNewPasswordServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUserServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertStudentServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertStudentServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentIDServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetStudentIDServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetStudentServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertQuizServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertQuizServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsQuizExistServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/IsQuizExistServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuizIDServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetQuizIDServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllValidQuizTitlesServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllValidQuizTitlesServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllQuizTitlesServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllQuizTitlesServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteQuizServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteQuizServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuizByTitleServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetQuizByTitleServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertQuestionServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertQuestionServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteQuestionsServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteQuestionsServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertQuizSubmitServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertQuizSubmitServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentsQuizSubmitionsServer">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetStudentsQuizSubmitionsServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://wcf-ashdodarchieve-service.azurewebsites.net/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

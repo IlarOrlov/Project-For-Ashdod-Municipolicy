@@ -1,0 +1,90 @@
+﻿<Page x:Class="Client_WPF.Page_StudentMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Client_WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Page_StudentMenu">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="0.4*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/subBackground.png"/>
+        </Grid.Background>
+
+        <Grid Grid.Column="1" Grid.Row="1">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!-- STUDENT'S NAME -->
+            <Button x:Name="studentName" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    Width="100" Height="100"
+                     HorizontalContentAlignment="Left" VerticalContentAlignment="Top"
+                     FontSize="45" FontFamily="Asakim" Foreground="#FF080864" Click="Logout_Click"
+                     Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="1" Grid.Column="0" />
+
+            <!-- TITLE -->
+            <TextBlock Text="בחר שאלון" HorizontalAlignment="Center" VerticalAlignment="Center" 
+           FontSize="120" FontFamily="Ts Matka" FontWeight="Bold" 
+           Grid.Row="0"/>
+
+        </Grid>
+        
+        <!-- SUB TITLE -->
+        <TextBlock Text=": נושא השאלון" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   FontSize="50" FontFamily="Nehama" FontWeight="Bold"
+                   Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+        <!-- QUIZ TITLE -->
+        <TextBox x:Name="quizTitle" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                 VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
+                 FontSize="26" FontFamily="Assistant ExtraBold" Foreground="#FF080864"
+                 Height="70" Width="700" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="Black" IsReadOnly="True" 
+                 Text="{Binding ElementName=quizTitles, Path=Text}" >
+
+            <TextBox.Resources>
+                <Style TargetType="Border" >
+                    <Setter Property="CornerRadius" Value="35" />
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <!-- START BUTTON -->
+        <Button x:Name="startQuiz" Content="התחל חידון" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+                FontWeight="Bold" FontSize="30" FontFamily="Nehama" Grid.Row="4" Grid.Column="1" Visibility="Hidden" Click="StartQuiz_Click"
+                Height="100" Width="200" Foreground="White" Background="#FF080864" BorderBrush="White" >
+
+            <Button.Resources >
+                <Style TargetType="Border" >
+                    <Setter Property="CornerRadius" Value="20" />
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <ComboBox x:Name="quizTitles" Height="60" Width="550" Grid.Row="3" Grid.Column="1"
+                  Foreground="#FF080864" FontFamily="Asakim" FontSize="26" FontWeight="Bold" 
+                  VerticalContentAlignment="Center" HorizontalContentAlignment="Right"
+                  SelectionChanged="quizTitels_SelectionChanged" />
+
+    </Grid>
+</Page>

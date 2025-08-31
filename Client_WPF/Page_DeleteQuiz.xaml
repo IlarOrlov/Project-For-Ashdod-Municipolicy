@@ -1,0 +1,85 @@
+﻿<Page x:Class="Client_WPF.Page_DeleteQuiz"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Client_WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Page_DeleteQuiz">
+
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/subBackground.png"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+
+        <!-- TITLE -->
+        <TextBlock Text="מחק שאלון" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="120" FontFamily="Ts Matka" FontWeight="Bold" 
+                   Grid.Row="1" />
+
+        <!-- BACK BUTTON -->
+        <Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Grid.Row="0" Grid.Column="0" Click="Back_Click"
+                Height="70" Width="110" Foreground="White" Background="#FF080864" BorderBrush="White" >
+
+            <Button.Resources >
+                <Style TargetType="Border" >
+                    <Setter Property="CornerRadius" Value="35" />
+                </Style>
+            </Button.Resources >
+
+            <Button.Content >
+                <Image Source="Images/backArrow.png" Height="48" />
+            </Button.Content>
+
+        </Button>
+
+        <!-- SUB TITLE -->
+        <TextBlock Text=": נושא השאלון" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                   FontSize="50" FontFamily="Nehama" FontWeight="Bold"
+                   Grid.Row="2" />
+
+        <!-- QUIZ TITLE -->
+        <TextBox x:Name="quizTitle" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                 VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
+                 FontSize="26" FontFamily="Assistant ExtraBold" Foreground="#FF080864"
+                 Height="70" Width="500" Grid.Row="3" BorderBrush="Black" IsReadOnly="True" 
+                 Text="{Binding ElementName=quizTitels, Path=Text}" >
+
+            <TextBox.Resources>
+                <Style TargetType="Border" >
+                    <Setter Property="CornerRadius" Value="35" />
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <!-- DELETE BUTTON -->
+        <Button x:Name="deleteQuiz" Content="מחק חידון" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+                FontWeight="Bold" FontSize="30" FontFamily="Nehama" Grid.Row="5" Visibility="Hidden" Click="DeleteQuiz_Click"
+                Height="60" Width="170" Foreground="White" Background="#FF080864" BorderBrush="White">
+
+            <Button.Resources >
+                <Style TargetType="Border" >
+                    <Setter Property="CornerRadius" Value="30" />
+                </Style>
+            </Button.Resources >
+        </Button>
+
+        <ComboBox x:Name="quizTitels" Height="60" Width="550" Grid.Row="4"
+                  Foreground="#FF080864" FontFamily="Asakim" FontSize="26" FontWeight="Bold" 
+                  VerticalContentAlignment="Center" HorizontalContentAlignment="Right" SelectionChanged="quizTitels_SelectionChanged" />
+
+    </Grid>
+</Page>

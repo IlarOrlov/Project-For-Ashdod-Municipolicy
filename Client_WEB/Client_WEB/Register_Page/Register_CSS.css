@@ -1,0 +1,83 @@
+﻿body {
+    background-image: url("../images/opening.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px; /* Reduced from 80px */
+    font-family: Nehama;
+    height: 70px; /* Reduced from 150px */
+    width: 220px; /* Reduced from 450px */
+    color: white;
+    background-color: #080864;
+    border: 1px solid white;
+    border-radius: 35px; /* Adjusted to match new size */
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    button:hover {
+        background-color: #0a0a96;
+        transform: scale(1.05);
+    }
+
+/* Tablets and smaller */
+@media (max-width: 768px) {
+    button {
+        font-size: 28px;
+        height: 60px;
+        width: 180px;
+        border-radius: 30px;
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    button {
+        font-size: 22px;
+        height: 50px;
+        width: 140px;
+        border-radius: 25px;
+    }
+
+    body {
+        padding: 20px;
+    }
+}
+
+.logo {
+    width: 700px;
+    max-width: 80%;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 220px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 160px;
+        margin-bottom: 15px;
+    }
+}

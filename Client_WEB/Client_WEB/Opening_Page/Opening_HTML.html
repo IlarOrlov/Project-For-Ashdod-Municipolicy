@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>חידון ארכיון - אשדוד</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url('../images/opening.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .label {
+            font-size: calc(5em + 2vw);
+            margin-bottom: 20px;
+            color: black;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .sub-label {
+            font-size: calc(3em + 1.5vw);
+            margin-bottom: 40px;
+            color: black;
+        }
+
+        .start-button,
+        .instructions-button {
+            font-size: 2em;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #FF7F50, #FF4500);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+            margin-top: 20px;
+        }
+
+            .start-button:hover,
+            .instructions-button:hover {
+                transform: scale(1.1);
+                background: linear-gradient(45deg, #FF6347, #FF0000);
+            }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.95);
+            color: black;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            max-width: 90%;
+            width: 400px;
+            text-align: right;
+            direction: rtl;
+        }
+
+            .popup h2 {
+                margin-bottom: 15px;
+                font-size: 1.5em;
+            }
+
+            .popup p {
+                font-size: 1em;
+                line-height: 1.7;
+            }
+
+            .popup a {
+                color: #0645AD;
+                text-decoration: underline;
+                word-break: break-all;
+            }
+
+        .close-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #FF4500;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+            .close-button:hover {
+                background-color: #FF0000;
+            }
+
+        @media (max-width: 768px) {
+            .label {
+                font-size: calc(4em + 1.5vw);
+            }
+
+            .sub-label {
+                font-size: calc(2.5em + 1vw);
+            }
+
+            .start-button,
+            .instructions-button {
+                font-size: 1.5em;
+                padding: 12px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .label {
+                font-size: calc(3.5em + 1vw);
+            }
+
+            .sub-label {
+                font-size: calc(2em + 1vw);
+            }
+
+            .start-button,
+            .instructions-button {
+                font-size: 1.2em;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="label">חידון ארכיון</div>
+        <div class="sub-label">אשדוד</div>
+        <button class="start-button" onclick="window.location.href='../Register_Page/Register_HTML.html'">התחל</button>
+        <button class="instructions-button" onclick="document.getElementById('popup').style.display='block'">הוראות</button>
+    </div>
+
+    <div class="popup" id="popup">
+        <h2>הוראות</h2>
+        <p>
+            ברוכים הבאים לחידוני הארכיון שלנו!<br>
+            איך משתתפים?<br>
+            בוחרים בשאלה. לכל אחת מהן, 4 תשובות אמריקאיות שיש לבחור את הנכונה בהן.<br>
+            בנוסף, <u>יש לרשום את מספר הפריט בארכיון</u>, התומך בתשובה שנבחרה.<br>
+            ניתן לבחור עד 3 מספרי פריטים.<br>
+            לכניסה לארכיון: <a href="https://www.arc-ashdod.com" target="_blank">https://www.arc-ashdod.com</a><br>
+            שימו לב – מבין התשובות הנכונות, <b>ייבחרו המקדימים להשיב</b>.<br>
+            בהצלחה!
+        </p>
+        <button class="close-button" onclick="document.getElementById('popup').style.display='none'">סגור</button>
+    </div>
+</body>
+</html>

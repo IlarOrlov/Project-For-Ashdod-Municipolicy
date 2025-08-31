@@ -1,0 +1,59 @@
+﻿/* CONTAINS THE HTML PAGE'S ELEMENTS */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* THE MAIN TITLE */
+h1 {
+    font-family: 'Ts Matka';
+    font-size: 85px;
+    font-weight: bold;
+    text-align: center;
+    color: #080864;
+}
+
+/* THE SUB TITLES */
+h2 {
+    font-family: Nehama;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    height: 20px;
+}
+
+.aspNetHidden {
+    display: none !important;
+}
+
+/* SUB DIV FOR THE OTHER ELEMENTS */
+div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* THE SELECT ELEMENT */
+.quiz-titles {
+    height: 55px;
+    width: 500px;
+    background-color: white;
+    border-radius: 25px;
+    font-family: 'Asakim';
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    direction: ltr;
+}
+
+/* THE STUDENT'S NAME */
+.user-name {
+    font-family: Asakim;
+    font-size: 40px;
+    background-color: transparent;
+    border-color: transparent;
+    width: 180px;
+}
